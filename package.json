@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/aflavors/burger/issues"
   },
-  "homepage": "https://github.com/aflavors/burger#readme"
+  "homepage": "https://github.com/aflavors/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
 }
