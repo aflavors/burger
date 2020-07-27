@@ -1,2 +1,65 @@
-<!--Test HTML Content-->
-<h1>Burgers!</h1>
+<!--HTML Content-->
+
+<!--Burger Jumbotron-->
+<div class="jumbotron jumbotron-fluid burger-jumbo">
+  <div class="container">
+    <h1 class="display-6">Eat-Da-Burger</h1>
+    <img src="/assets/img/burger.svg" alt="stylized hamburger icon" width="200" height="200" style="display: block;" />
+  </div>
+</div>
+
+<!--Burger Grid-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <!--Burgers To Eat-->
+      <div class="container">
+            <h2>Burgers to Eat</h2>
+            <ul>
+                {{#each burger}}
+                    {{#unless this.devoured}}
+                    <li>
+                        {{this.id}}.  {{this.burger_name}}
+                        <form action="/{{this.id}}?_method=PUT" method="POST">
+                            <input type="hidden" name="devour" value="true">
+                            <button type="submit" class="btn btn-warning" id="devour-btn">Devour</button>
+                        </form>
+                    </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+    <!--Submit Burger Form-->
+      <h2>Make a Burger</h2>
+      <div class="form-group">
+        <form class="create-update-form" action="/" method="POST">
+            <div class="form-group">
+                <label for="ca">Make a Burger:</label><br>
+                <input type="text" id="burger" name="burgerName" class="form-control-lg">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                Enter a burger you would like to make and click the "Make a Burger" button below.
+                </small>
+            </div>
+            <button type="submit" class="btn btn-primary">Make Burger</button>
+        </form>
+    </div>
+    </div>
+    <div class="col">
+    <!--Devoured Burgers-->
+        <div class="container">
+            <h2>Eaten Burgers</h2>
+            <ul>
+                {{#each burger}}
+                    {{#if this.devoured}}
+                        <li>
+                            {{this.id}}.  {{this.burger_name}}
+                        </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
