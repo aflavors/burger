@@ -1,0 +1,11 @@
+div.jumbotron.jumbotron-fluid.burger-jumbo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+};
+
+#devour-btn{
+    background-color: #fab71f;
+    border-color: #fab71f;
+};
