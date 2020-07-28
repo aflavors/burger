@@ -1,11 +1,45 @@
 .burger-jumbo{
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
     text-align: center;
-};
-
-#devour-btn{
+}
+.devour-btn{
     background-color: #fab71f;
     border-color: #fab71f;
-};
+    font-size: 12px;
+    margin-top: 5px;
+    width: 80%;
+}
+.li-item{
+    list-style-type: none;
+    padding: 5px;
+}
+.burger-svg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.burger-cols{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+.devoured-item{
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.make-btn{
+    background-color: #C26232;
+    border-color: #C26232;
+    width: 50%;
+    color: white;
+}
