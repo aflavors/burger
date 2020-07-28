@@ -13,13 +13,13 @@ router.get("/", function(req, res) {
       var handlebarObject = {
         burger: data
       };
-      console.log(handlebarObject);
+      //console.log(handlebarObject);
       res.render("index", handlebarObject);
     });
   });
 
 //insertOne - POST
-router.post("/", function(req, res) {
+router.post("/api/burger", function(req, res) {
     burger.insertOne([
       "burger_name", "devoured"
     ], [
@@ -30,15 +30,16 @@ router.post("/", function(req, res) {
   });
 
 //updateOne - PUT
-router.put("/:id", function(req, res) {
+router.put("/burger/:id", function(req, res) {
+  console.log("Inside put route");
     var condition = "id = " + req.params.id;
   
-    console.log("condition", condition);
+    console.log("condition: "+ condition);
   
     burger.updateOne({
-      devoured: req.body.devour
+      devoured: true
     }, condition, function() {
-      res.redirect("/");
+      console.log("Done");
     });
   });
 
