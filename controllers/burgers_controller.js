@@ -31,7 +31,7 @@ router.post("/api/burger", function(req, res) {
 
 //updateOne - PUT
 router.put("/burger/:id", function(req, res) {
-  console.log("Inside put route");
+  //console.log("Inside put route");
     var condition = "id = " + req.params.id;
   
     console.log("condition: "+ condition);
@@ -40,6 +40,7 @@ router.put("/burger/:id", function(req, res) {
       devoured: true
     }, condition, function() {
       console.log("Done");
+      res.redirect(303, "/")
     });
   });
 
