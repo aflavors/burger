@@ -25,7 +25,7 @@ Use the package manager [node](https://www.npmjs.com/) to run Eat Da Burger.
 The application will be invoked with the following comands:
 
     npm install
-    node index.js
+    node server.js
 
 ### Deployed
 
