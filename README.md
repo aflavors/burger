@@ -33,6 +33,6 @@ Eat Da Burger is deployed  [here](https://sheltered-sands-52662.herokuapp.com/) 
 
 ### Questions
 
-Employee Tracker was created by [aflavors](https://github.com/aflavors).
+Eat Da Burger was created by [aflavors](https://github.com/aflavors).
 
 If you have any questions, please contact me at akeemflavors@gmail.com. 
